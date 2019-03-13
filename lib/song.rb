@@ -33,4 +33,10 @@ class Song
     return hash_of_genres
   end 
   
+  def self.artist_count 
+    hash_of_artists = Hash.new(0)
+    @@artists.each { |artist| hash_of_artists[artist] += 1 }
+    return hash_of_artists
+  end 
+  
 end 
